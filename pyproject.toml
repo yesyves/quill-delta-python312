@@ -1,11 +1,11 @@
 [tool.poetry]
-name = "quill-delta"
-version = "1.0.3"
+name = "quill-delta-python312"
+version = "0.1"
 description = "Python port of the quill.js delta library that enables operational transformation with aditional functionality for rendering html"
 authors = ["Brantley Harris <brantley@forge.works>"]
 license = "MIT"
-homepage = "https://github.com/forgeworks/delta-py"
-repository = "https://github.com/forgeworks/delta-py"
+homepage = "https://github.com/yesyves/quill-delta-python312"
+repository = "https://github.com/yesyves/quill-delta-python312"
 readme = "README.md"
 packages = [
   { include = "delta" },
@@ -16,17 +16,18 @@ classifiers=[
     'License :: OSI Approved :: MIT License',
     'Natural Language :: English',
     'Programming Language :: Python :: 3',
-    'Programming Language :: Python :: 3.6',
-    'Programming Language :: Python :: 3.7',
-    'Programming Language :: Python :: 3.8',
+    'Programming Language :: Python :: 3.12',
+    'Programming Language :: Python :: 3.13',
+    'Programming Language :: Python :: 3.14',
+    'Programming Language :: Python :: 3.15',
     'Topic :: Text Processing :: Markup'
 ]
 
 [tool.poetry.dependencies]
-python = "^3.6"
+python = ">=3.12"
 diff-match-patch = "^20181111.0"
-lxml = {version = "^4.3", optional = true}
-cssutils = {version = "^1.0", optional = true}
+lxml = {version = ">=6.0", optional = true}
+cssutils = {version = ">=2.0", optional = true}
 
 [tool.poetry.extras]
 html = ["lxml", "cssutils"]
